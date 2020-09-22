@@ -11,8 +11,7 @@
 }
 body {
   position: relative;
-  background-image: url(../images/bgsmall.jpg);
-  height: 100%;
+  background-image: url(../images/bgsmall1.jpg);
 }
 .main {
   flex-direction: row;
@@ -21,27 +20,16 @@ body {
   align-items: flex-start;
   padding: 0 20px;
 }
-#slide1 {
-  display: block;
-  /* display: none; */
-}
 #slide2 {
-  display: block;
-  /* display: none; */
-}
-#slide3 {
-  /* display: none; */
   display: block;
 }
 #festive {
   width: 100%;
   display: flex;
-  display: block;
   margin: auto;
   max-width: 250px;
 }
 #logo {
-  /* display: none; */
   width: 22%;
   display: block;
   margin-top: 20px;
@@ -54,24 +42,23 @@ body {
   font-weight: bold;
 }
 #slogan {
-  /* display: none; */
   text-align: center;
   font-size: 50px;
   color: #005f9c;
-  user-select: none;
-  transition: all 0.25s ease-out;
+}
+.submitContainer {
+  display: flex;
+  justify-content: center;
 }
 #submit {
   margin-top: 20px;
+  height: 45px;
   background-color: #e6e5d7;
   width: 35%;
-  display: flex;
-  justify-content: center;
   border: 2px;
   font-size: 28px;
   border-color: #e6e5d7;
   border-radius: 5px;
-  margin-left: 150px;
 }
 .menu-btn {
   outline: none;
@@ -146,13 +133,7 @@ body {
 }
 .regular-checkbox:checked:after {
   content: "\2714";
-  top: 0px;
-  left: 3px;
   color: #99a1a7;
-}
-.arrow {
-  display: none;
-  z-index: 3;
 }
 .arrow1 {
   width: 80%;
@@ -252,12 +233,10 @@ body {
   -o-animation: fadein 2s;
 }
 #thankContainer {
-  /* display: block; */
   display: none;
   color: #000;
   width: 100%;
   text-align: center;
-  clear: both;
   font-size: 25px;
   background-color: #eceec0;
   border-radius: 200px 0px 200px 0px;
@@ -281,7 +260,6 @@ body {
   width: 15%;
   display: flex;
   float: right;
-  /* display: block; */
 }
 .hdfclogocontainer {
   overflow: hidden;
