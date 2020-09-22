@@ -69,13 +69,21 @@ body {
 #submit {
   margin-top: 10px;
   height: 55px;
-  background-color: #e6e5d7;
+  background-color: #dbdbd7;
   width: 60%;
   border: 2px;
   font-size: 28px;
-  border-color: #e6e5d7;
+  color: #004068;
+  border-color: #a5a5a5;
   border-radius: 5px;
 }
+#submit:disabled,
+button[disabled] {
+  background-color: #dbdbd7;
+  border-color: #9e9e9e;
+  color: #5293c7;
+}
+
 .menu-btn {
   outline: none;
   z-index: 2;
@@ -354,5 +362,10 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  #container {
+    padding: 0.833vw 0.833vw;
   }
 }

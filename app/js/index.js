@@ -159,7 +159,6 @@ function openMenu() {
     }
 }
 function onSubmit() {
-    alert($('form').serialize())
     $('#thankContainer').css('animation', 'fadein 1s')
     $('.imgContainer').css('width', '40%')
     $('.middle,#logo').css('width', '0%')
@@ -168,9 +167,9 @@ function onSubmit() {
     $('#slide2,#logo,#slogan,.middle').css('display', 'none')
     $('#thankContainer,.hdfcLogo').css('display', 'block')
 }
-$('.confirm_wishlist').submit(function(e) {
-    
+$('.confirm_wishlist').submit(function (e) {
+
     e.preventDefault();
-    
+
     // $(this).serialize(); will be the serialized form
 });
