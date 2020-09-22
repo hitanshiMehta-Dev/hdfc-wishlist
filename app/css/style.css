@@ -368,4 +368,101 @@ button[disabled] {
   #container {
     padding: 0.833vw 0.833vw;
   }
+  .main {
+    padding: 0 1.667vw;
+  }
+  #festive {
+    max-width: 25vw;
+  }
+  #logo {
+    margin-top: 1.667vw;
+  }
+  #wishlist {
+    font-size: 2.917vw;
+    padding-left: 1.667vw;
+  }
+  #slogan {
+    margin-top: 1.667vw;
+    font-size: 2.083vw;
+  }
+  #submit {
+    margin-top: 0.833vw;
+    height: 4.583vw;
+    border: 0.167vw;
+    font-size: 2.333vw;
+    border-radius: 0.417vw;
+  }
+  .menu-btn {
+    border: 0.417vw;
+    padding: 1.333vw;
+    font-size: 2.333vw;
+    height: 4.167vw;
+    border-radius: 0.417vw;
+    width: 40vw;
+  }
+  .dropdown-menu {
+    margin-top: 1.667vw;
+  }
+  .middle {
+    margin-left: 2.5vw;
+  }
+  .menu-content {
+    padding: 1.25vw 2.5vw;
+    width: 35vw;
+    border-radius: 0.417vw 0.417vw 0 0;
+    min-width: 13.333vw;
+  }
+  .links {
+    padding: 0.667vw 0.667vw;
+    border-radius: 0.417vw;
+    font-size: 1.5vw;
+    border-bottom: 0.083vw solid #e6e5d7;
+  }
+  .links:hover {
+    border-radius: 0.417vw;
+  }
+  .regular-checkbox {
+    border: 0.083vw solid #cacece;
+    box-shadow: 0 0.083vw 0.167vw rgba(0, 0, 0, 0.05),
+      inset 0px -1.25vw 0.833vw -1vw rgba(0, 0, 0, 0.05);
+    padding: 0.75vw;
+    border-radius: 0.25vw;
+    margin-right: 1.667vw;
+  }
+  .regular-checkbox:active,
+  .regular-checkbox:checked:active {
+    box-shadow: 0 0.083vw 0.167vw rgba(0, 0, 0, 0.05),
+      inset 0 0.083vw 0.25vw rgba(0, 0, 0, 0.1);
+  }
+  .regular-checkbox:checked {
+    border: 0.083vw solid #adb8c0;
+    box-shadow: 0 0.083vw 0.167vw rgba(0, 0, 0, 0.05),
+      inset 0px -1.25vw 0.833vw -1vw rgba(0, 0, 0, 0.05),
+      inset 1.25vw 0.833vw -1vw rgba(255, 255, 255, 0.1);
+    padding: 0.083vw 0.333vw 0.083vw 0.333vw;
+  }
+  #thankContainer {
+    font-size: 2.083vw;
+    border-radius: 16.667vw 0vw 16.667vw 0vw;
+    margin-top: 4.167vw;
+    padding: 10vw 0vw 10vw 0vw;
+    margin-left: 4.167vw;
+  }
+  #thankyou {
+    margin-top: 3.333vw;
+    font-size: 5.833vw;
+  }
+  #line1 {
+    margin-top: 3.333vw;
+    font-size: 4.167vw;
+  }
+  #line2 {
+    font-size: 4.167vw;
+  }
+  #hdfcLogo {
+    margin-top: 1.667vw;
+  }
+  .hdfclogocontainer {
+    margin-bottom: 4.167vw;
+  }
 }
