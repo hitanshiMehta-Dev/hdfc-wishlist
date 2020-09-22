@@ -1,10 +1,38 @@
 let flag = 0;
 checkVisibility()
-
+document.getElementById("wardrobe").onclick = function () {
+    if (this.checked) {
+        $('#wardrobeimg').css('display', 'block')
+        $('#wardrobeContainer').css('backgroundColor', '#e8e8e8')
+        $('#wardrobeContainer').css('animation', 'fadein 1s')
+        flag = flag + 1;
+        checkVisibility()
+    } else {
+        $('#wardrobeimg').css('display', 'none')
+        $('#wardrobeContainer').css('backgroundColor', 'white')
+        flag = flag - 1;
+        checkVisibility()
+    }
+}
+document.getElementById("renovate").onclick = function () {
+    if (this.checked) {
+        $('#renovateimg').css('display', 'block')
+        $('#renovateContainer').css('backgroundColor', '#e8e8e8')
+        $('#renovateContainer').css('animation', 'fadein 1s')
+        flag = flag + 1;
+        checkVisibility()
+    } else {
+        $('#renovateimg').css('display', 'none')
+        $('#renovateContainer').css('backgroundColor', 'white')
+        flag = flag - 1;
+        checkVisibility()
+    }
+}
 document.getElementById("home").onclick = function () {
     if (this.checked) {
         $('#homeimg').css('display', 'block')
         $('#homeContainer').css('backgroundColor', '#e8e8e8')
+        $('#homeContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -18,6 +46,7 @@ document.getElementById("fridge").onclick = function () {
     if (this.checked) {
         $('#fridgeimg').css('display', 'block')
         $('#fridgeContainer').css('backgroundColor', '#e8e8e8')
+        $('#fridgeContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -31,6 +60,7 @@ document.getElementById("health").onclick = function () {
     if (this.checked) {
         $('#healthimg').css('display', 'block')
         $('#healthContainer').css('backgroundColor', '#e8e8e8')
+        $('#healthContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -44,6 +74,7 @@ document.getElementById("business").onclick = function () {
     if (this.checked) {
         $('#businessimg').css('display', 'block')
         $('#businessContainer').css('backgroundColor', '#e8e8e8')
+        $('#businessContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -57,6 +88,7 @@ document.getElementById("vehicle").onclick = function () {
     if (this.checked) {
         $('#vehicleimg').css('display', 'block')
         $('#vehicleContainer').css('backgroundColor', '#e8e8e8')
+        $('#vehicleContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -70,6 +102,7 @@ document.getElementById("jewelery").onclick = function () {
     if (this.checked) {
         $('#jeweleryimg').css('display', 'block')
         $('#jeweleryContainer').css('backgroundColor', '#e8e8e8')
+        $('#jeweleryContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -83,6 +116,7 @@ document.getElementById("laptop").onclick = function () {
     if (this.checked) {
         $('#laptopimg').css('display', 'block')
         $('#laptopContainer').css('backgroundColor', '#e8e8e8')
+        $('#laptopContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -96,6 +130,7 @@ document.getElementById("phone").onclick = function () {
     if (this.checked) {
         $('#phoneimg').css('display', 'block')
         $('#phoneContainer').css('backgroundColor', '#e8e8e8')
+        $('#phoneContainer').css('animation', 'fadein 1s')
         flag = flag + 1;
         checkVisibility()
     } else {
@@ -124,6 +159,8 @@ function openMenu() {
     }
 }
 function onSubmit() {
-    $('#slide2,#logo,#slogan').css('display', 'none')
+    $('.imgContainer').css('width', '40%')
+    $('.middle,#logo').css('width', '0%')
+    $('#slide2,#logo,#slogan,.middle').css('display', 'none')
     $('#thankContainer,.hdfcLogo').css('display', 'block')
 }

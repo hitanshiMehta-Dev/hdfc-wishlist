@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Helvetica";
+  src: url("../Fonts/HelveticaNeueLTStd-Cn_1.woff2") format("woff2"),
+    url("../Fonts/HelveticaNeueLTStd-Cn_1.woff2") format("woff");
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
+  font-family: "Helvetica";
 }
 
 #container {
@@ -22,39 +27,50 @@ body {
 }
 #slide2 {
   display: block;
+  /* display: none; */
 }
 #festive {
   width: 100%;
   display: flex;
   margin: auto;
-  max-width: 250px;
+  max-width: 300px;
 }
 #logo {
-  width: 22%;
+  width: 20%;
+  display: none;
   display: block;
   margin-top: 20px;
 }
+#imgContainer {
+  width: 30%;
+  text-align: center;
+}
 #wishlist {
-  font-size: 50px;
+  font-size: 35px;
   padding-left: 20px;
   color: #005f9c;
-  letter-spacing: 2px;
   font-weight: bold;
 }
 #slogan {
+  /* display: none; */
+  margin-top: 20px;
+  width: 100%;
   text-align: center;
-  font-size: 50px;
+  font-size: 25px;
   color: #005f9c;
 }
 .submitContainer {
+  width: 100%;
+  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 #submit {
-  margin-top: 20px;
-  height: 45px;
+  margin-top: 10px;
+  height: 55px;
   background-color: #e6e5d7;
-  width: 35%;
+  width: 60%;
   border: 2px;
   font-size: 28px;
   border-color: #e6e5d7;
@@ -67,27 +83,32 @@ body {
   border-color: #5293c7;
   border: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   color: white;
   padding: 16px;
   font-size: 28px;
-  text-align: left;
-  height: 60px;
+  height: 50px;
   border-radius: 5px;
-  width: 520px;
+  width: 480px;
 }
 .dropdown-menu {
   margin-top: 20px;
   display: inline-block;
 }
 .middle {
+  margin-right: auto;
+  margin-left: 30px;
+  width: 45%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .menu-content {
   padding: 15px 30px;
-  display: none;
-  width: 460px;
+  display: block;
+  width: 420px;
   border-radius: 5px 5px 0 0;
   background-color: white;
   min-width: 160px;
@@ -95,14 +116,20 @@ body {
 }
 .links {
   color: black;
-  padding: 12px 16px;
+  padding: 8px 8px;
+  border-radius: 5px;
   text-decoration: none;
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   border-bottom: 1px solid #e6e5d7;
 }
 .links:hover {
-  background-color: #d1d1d1;
+  /* background-color: #d1d1d1; */
+  border-radius: 5px;
+  /* animation: fadein 1s;
+  -moz-animation: fadein 2s;
+  -webkit-animation: fadein 2s;
+  -o-animation: fadein 2s; */
 }
 
 .regular-checkbox {
@@ -114,7 +141,8 @@ body {
     inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 9px;
   border-radius: 3px;
-  float: right;
+  float: left;
+  margin-right: 20px;
 }
 .regular-checkbox:active,
 .regular-checkbox:checked:active {
@@ -129,7 +157,7 @@ body {
     inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),
     inset 15px 10px -12px rgba(255, 255, 255, 0.1);
   color: #99a1a7;
-  padding: 3px;
+  padding: 1px 4px 1px 4px;
 }
 .regular-checkbox:checked:after {
   content: "\2714";
@@ -143,97 +171,116 @@ body {
 .jeweleryimg {
   display: none;
   position: absolute;
+  top: 65%;
   width: 10%;
-  left: 2%;
-  top: 52%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  right: 2%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .fridgeimg {
   display: none;
   position: absolute;
-  right: 16%;
-  width: 15%;
-  top: 0%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
-}
-#imgContainer {
-  width: 22%;
-  text-align: center;
+  bottom: 5%;
+  width: 9%;
+  left: 8%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .homeimg {
   display: none;
   position: absolute;
-  top: 20%;
-  width: 15%;
+  top: 42%;
+  width: 10%;
   right: 2%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .healthimg {
   display: none;
   position: absolute;
-  top: 45%;
-  width: 10%;
-  right: 20%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  top: 50%;
+  width: 7%;
+  right: 15%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .businessimg {
   display: none;
   position: absolute;
-  bottom: 20%;
-  left: 12%;
-  width: 15%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  bottom: 18%;
+  left: 22%;
+  width: 13%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .vehicleimg {
   display: none;
   position: absolute;
-  top: 52%;
-  width: 15%;
-  right: 0%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  width: 18%;
+  left: 8%;
+  top: 56%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .laptopimg {
   display: none;
   position: absolute;
-  bottom: 3%;
-  width: 15%;
-  left: 2%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  right: 14%;
+  width: 9%;
+  top: 24%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 .phoneimg {
   display: none;
   position: absolute;
-  top: 73%;
-  right: 14%;
-  width: 12%;
-  animation: fadein 2s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s;
+  right: 2%;
+  width: 9%;
+  top: 18%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
+}
+.renovateimg {
+  display: none;
+  position: absolute;
+  top: 77%;
+  right: 12%;
+  width: 10%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
+}
+.wardrobeimg {
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  width: 9%;
+  left: 22%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
 }
 #thankContainer {
   display: none;
+  /* display: block; */
   color: #000;
   width: 100%;
   text-align: center;
