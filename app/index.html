@@ -14,38 +14,98 @@
   </head>
   <body>
     <div id="container">
+      <div class="hdfcHeaderLogoContainer">
+        <img
+          src="images/hdfc_header.jpg"
+          id="hdfcHeaderLogo"
+          class="hdfcHeaderLogo"
+        />
+      </div>
       <div class="main">
         <div class="imgContainer" id="imgContainer">
           <img src="images/festive.png" id="festive" class="festive" />
-          <p id="wishlist" class="wishlist">Ab all is possible</p>
+          <p id="wishlist" class="wishlist">now all is</p>
+          <p id="possible" class="possible">possible</p>
         </div>
         <div class="middle">
-          <p id="slogan" class="slogan">
-            Tell us what you wish for this festive season, let’s go>> Check one
-            or many
-          </p>
+          <p id="slogan" class="slogan">My wish list</p>
           <div id="slide2" class="slide2">
-            <img src="images/home.png" class="homeimg" id="homeimg" />
-            <img src="images/fridge.png" class="fridgeimg" id="fridgeimg" />
-            <img src="images/insurance.png" class="healthimg" id="healthimg" />
-            <img src="images/debt.png" class="businessimg" id="businessimg" />
-            <img src="images/vehicl.png" class="vehicleimg" id="vehicleimg" />
+            <img
+              src="images/home.png"
+              class="homeimg"
+              id="homeimg"
+              data-id="homeimg"
+              onclick="homeImage(this)"
+            />
+            <img
+              src="images/fridge.png"
+              class="fridgeimg"
+              id="fridgeimg"
+              data-id="fridgeimg"
+              onclick="fridgeImage(this)"
+            />
+            <img
+              src="images/insurance.png"
+              class="healthimg"
+              id="healthimg"
+              data-id="healthimg"
+              onclick="healthImage(this)"
+            />
+            <img
+              src="images/business.png"
+              class="businessimg"
+              id="businessimg"
+              data-id="businessimg"
+              onclick="businessImage(this)"
+            />
+            <img
+              src="images/car.png"
+              class="vehicleimg"
+              id="vehicleimg"
+              data-id="vehicleimg"
+              onclick="scaleVehicle(this)"
+            />
+            <img
+              src="images/bike.png"
+              class="bikeimg"
+              id="bikeimg"
+              data-id="bikeimg"
+              onclick="scaleVehicle(this)"
+            />
             <img
               src="images/jewelery.png"
               class="jeweleryimg"
               id="jeweleryimg"
+              data-id="jeweleryimg"
+              onclick="jewelryImage(this)"
             />
-            <img src="images/laptop.png" class="laptopimg" id="laptopimg" />
-            <img src="images/mobile.png" class="phoneimg" id="phoneimg" />
+            <img
+              src="images/laptop.png"
+              class="laptopimg"
+              id="laptopimg"
+              data-id="laptopimg"
+              onclick="laptopImage(this)"
+            />
+            <img
+              src="images/mobile.png"
+              class="phoneimg"
+              id="phoneimg"
+              data-id="phoneimg"
+              onclick="mobileImage(this)"
+            />
             <img
               src="images/Renovate.jpg"
               class="renovateimg"
               id="renovateimg"
+              data-id="renovateimg"
+              onclick="renovateImage(this)"
             />
             <img
               src="images/wardrobe.png"
               class="wardrobeimg"
               id="wardrobeimg"
+              data-id="wardrobeimg"
+              onclick="wardrobeImage(this)"
             />
             <form
               type="submit"
@@ -57,7 +117,7 @@
               <div class="dropdown-menu">
                 <div class="menu-content" id="menu-content">
                   <label class="links" href="#" id="healthContainer">
-                    Keep my health in check
+                    Health 👩‍⚕️
                     <input
                       type="checkbox"
                       id="health"
@@ -66,7 +126,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="businessContainer">
-                    Grow my business
+                    Business Growth 🏢💼
                     <input
                       type="checkbox"
                       id="business"
@@ -75,7 +135,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="vehicleContainer">
-                    Own a private vehicle for safer commute
+                    Safe commute 🚗
                     <input
                       type="checkbox"
                       id="vehicle"
@@ -84,7 +144,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="fridgeContainer">
-                    Ease my kitchen duties
+                    Upgrade Kitchen
                     <input
                       type="checkbox"
                       id="fridge"
@@ -93,7 +153,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="jeweleryContainer">
-                    Buy jewelry for the upcoming festive season
+                    Jewelry 💎
                     <input
                       type="checkbox"
                       id="jewelery"
@@ -102,7 +162,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="homeContainer">
-                    Buy my dream home
+                    Dream Home 🏡
                     <input
                       type="checkbox"
                       id="home"
@@ -111,7 +171,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="laptopContainer">
-                    Make WFH a seamless experience
+                    Gift for loved ones 💻
                     <input
                       type="checkbox"
                       id="laptop"
@@ -120,7 +180,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="phoneContainer">
-                    Upgrade to a new smartphone
+                    Smartphone 📱
                     <input
                       type="checkbox"
                       id="phone"
@@ -129,7 +189,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="renovateContainer">
-                    Renovate my home
+                    Home Renovation 🏚️
                     <input
                       type="checkbox"
                       id="renovate"
@@ -138,7 +198,7 @@
                     />
                   </label>
                   <label class="links" href="#" id="wardrobeContainer">
-                    Get myself a new wardrobe
+                    Apparels 👗👖
                     <input
                       type="checkbox"
                       id="wardrobe"
@@ -157,7 +217,7 @@
                   class="submit"
                   onclick="onSubmit()"
                 >
-                  Send us your Wishlist
+                  Send us your wishlist
                 </button>
               </div>
             </form>
@@ -169,8 +229,12 @@
           <div class="thankyouContiner" id="thankContainer">
             <div>
               <label id="thankyou">Thank you</label><br />
-              <label id="line1">We will get in touch with</label><br />
-              <label id="line2"> you on 1st Oct</label>
+              <label id="line1">Thank you for sending us your wishlist!</label
+              ><br />
+              <label id="line2"
+                >We will reach out to you on October 1st with all our exclusive
+                offers!</label
+              >
             </div>
           </div>
         </div>

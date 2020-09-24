@@ -1,18 +1,22 @@
 @font-face {
   font-family: "Helvetica";
-  src: url("../Fonts/HelveticaNeueLTStd-Cn_1.woff2") format("woff2"),
-    url("../Fonts/HelveticaNeueLTStd-Cn_1.woff2") format("woff");
+  src: url("../Fonts/HelveticaNeueLTStd-Cn.woff2") format("woff2"),
+    url("../Fonts/HelveticaNeueLTStd-Cn.woff") format("woff");
 }
 * {
   margin: 0;
   padding: 0;
   font-family: "Helvetica";
 }
-
+html,
+body {
+  height: auto;
+  min-height: 100%;
+}
 #container {
   max-width: 1200px;
   margin: auto;
-  padding: 10px 10px;
+  padding: 0 0;
 }
 body {
   position: relative;
@@ -23,40 +27,66 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0 20px;
+  padding: 0 0;
 }
-#slide2 {
-  display: block;
-  /* display: none; */
-}
-#festive {
+.hdfcHeaderLogoContainer {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hdfcHeaderLogo {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 10px;
+}
+#slide2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#festive {
+  /* width: 100%;
+  display: flex; */
   margin: auto;
   max-width: 300px;
 }
 #logo {
   width: 20%;
-  display: block;
+  display: none;
   margin-top: 20px;
 }
+#mobileLogo {
+  display: none;
+}
 #imgContainer {
-  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* width: 30%; */
   /* width: 40%; */
-  text-align: center;
 }
 #wishlist {
-  font-size: 35px;
+  text-transform: uppercase;
+  font-size: 33px;
   padding-left: 20px;
   color: #005f9c;
   font-weight: bold;
 }
+#possible {
+  text-transform: uppercase;
+  font-size: 33px;
+  padding-left: 20px;
+  color: #005f9c;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
 #slogan {
-  /* display: none; */
-  margin-top: 20px;
-  width: 100%;
+  width: 80%;
   text-align: center;
-  font-size: 25px;
+  font-size: 36px;
   color: #005f9c;
 }
 .submitContainer {
@@ -98,26 +128,23 @@ button[disabled] {
   font-size: 28px;
   height: 50px;
   border-radius: 5px;
-  width: 480px;
+  width: 450px;
 }
 .dropdown-menu {
-  margin-top: 20px;
+  margin-top: 10px;
   display: inline-block;
 }
 .middle {
-  margin-right: auto;
-  margin-left: 30px;
-  /* width: 0%; */
   width: 45%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
 .menu-content {
   padding: 15px 30px;
   display: block;
-  width: 420px;
+  width: 390px;
   border-radius: 5px 5px 0 0;
   background-color: white;
   min-width: 160px;
@@ -133,15 +160,13 @@ button[disabled] {
   border-bottom: 1px solid #e6e5d7;
 }
 .links:hover {
-  /* background-color: #d1d1d1; */
   border-radius: 5px;
-  /* animation: fadein 1s;
-  -moz-animation: fadein 2s;
-  -webkit-animation: fadein 2s;
-  -o-animation: fadein 2s; */
 }
 
 .regular-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: none;
   -webkit-appearance: none;
   background-color: #fafafa;
@@ -169,8 +194,13 @@ button[disabled] {
   padding: 1px 4px 1px 4px;
 }
 .regular-checkbox:checked:after {
-  content: "\2714";
-  color: #99a1a7;
+  content: "";
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 12px;
+  width: 6px;
+  border-bottom: 5px solid #99a1a7;
+  border-right: 5px solid #99a1a7;
 }
 .arrow1 {
   width: 80%;
@@ -180,9 +210,9 @@ button[disabled] {
 .jeweleryimg {
   display: none;
   position: absolute;
-  top: 65%;
+  top: 59%;
   width: 10%;
-  right: 2%;
+  right: 1%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
@@ -192,7 +222,7 @@ button[disabled] {
   display: none;
   position: absolute;
   bottom: 5%;
-  width: 9%;
+  width: 8%;
   left: 8%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
@@ -202,9 +232,9 @@ button[disabled] {
 .homeimg {
   display: none;
   position: absolute;
-  top: 42%;
+  top: 37%;
   width: 10%;
-  right: 2%;
+  right: 7%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
@@ -213,9 +243,9 @@ button[disabled] {
 .healthimg {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 68%;
   width: 7%;
-  right: 15%;
+  left: 34%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
@@ -224,9 +254,9 @@ button[disabled] {
 .businessimg {
   display: none;
   position: absolute;
-  bottom: 18%;
-  left: 22%;
-  width: 13%;
+  bottom: 22%;
+  left: 23%;
+  width: 8%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
@@ -235,9 +265,20 @@ button[disabled] {
 .vehicleimg {
   display: none;
   position: absolute;
-  width: 18%;
-  left: 8%;
-  top: 56%;
+  width: 10%;
+  left: 22%;
+  top: 48%;
+  animation: fadein 0.8s;
+  -moz-animation: fadein 0.8s;
+  -webkit-animation: fadein 0.8s;
+  -o-animation: fadein 0.8s;
+}
+.bikeimg {
+  display: none;
+  position: absolute;
+  width: 10%;
+  left: 31%;
+  top: 46%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
@@ -246,7 +287,7 @@ button[disabled] {
 .laptopimg {
   display: none;
   position: absolute;
-  right: 14%;
+  left: 28%;
   width: 9%;
   top: 24%;
   animation: fadein 0.8s;
@@ -257,7 +298,7 @@ button[disabled] {
 .phoneimg {
   display: none;
   position: absolute;
-  right: 2%;
+  right: 0%;
   width: 9%;
   top: 18%;
   animation: fadein 0.8s;
@@ -268,8 +309,8 @@ button[disabled] {
 .renovateimg {
   display: none;
   position: absolute;
-  top: 77%;
-  right: 12%;
+  top: 80%;
+  right: 6%;
   width: 10%;
   animation: fadein 0.8s;
   -moz-animation: fadein 0.8s;
@@ -291,7 +332,7 @@ button[disabled] {
   display: none;
   /* display: block; */
   color: #000;
-  width: 100%;
+  width: 95%;
   text-align: center;
   font-size: 25px;
   background-color: #eceec0;
@@ -299,6 +340,8 @@ button[disabled] {
   margin-top: 50px;
   padding: 120px 0px 120px 0px;
   margin-left: 50px;
+  justify-content: center;
+  align-items: center;
 }
 #thankyou {
   margin-top: 40px;
@@ -313,15 +356,16 @@ button[disabled] {
 }
 #line1 {
   margin-top: 40px;
-  font-size: 50px;
+  font-size: 40px;
 }
 #line2 {
-  font-size: 50px;
+  font-size: 40px;
 }
 #hdfcLogo {
   width: 30%;
   margin-top: 20px;
   display: none;
+  visibility: hidden;
 }
 .hdfclogocontainer {
   overflow: hidden;
@@ -365,11 +409,12 @@ button[disabled] {
   }
 }
 @media screen and (max-width: 1200px) {
-  #container {
-    padding: 0.833vw 0.833vw;
-  }
   .main {
     padding: 0 1.667vw;
+  }
+  .hdfcHeaderLogo {
+    height: 5.833vw;
+    margin-bottom: 0.833vw;
   }
   #festive {
     max-width: 25vw;
@@ -377,12 +422,19 @@ button[disabled] {
   #logo {
     margin-top: 1.667vw;
   }
+  .mobileLogo {
+    float: right;
+  }
   #wishlist {
-    font-size: 2.917vw;
+    font-size: 2.75vw;
     padding-left: 1.667vw;
   }
+  #possible {
+    font-size: 2.75vw;
+    padding-left: 1.667vw;
+    letter-spacing: 0.208vw;
+  }
   #slogan {
-    margin-top: 1.667vw;
     font-size: 2.083vw;
   }
   #submit {
@@ -398,17 +450,14 @@ button[disabled] {
     font-size: 2.333vw;
     height: 4.167vw;
     border-radius: 0.417vw;
-    width: 40vw;
+    width: 37vw;
   }
   .dropdown-menu {
-    margin-top: 1.667vw;
-  }
-  .middle {
-    margin-left: 2.5vw;
+    margin-top: 0.833vw;
   }
   .menu-content {
     padding: 1.25vw 2.5vw;
-    width: 35vw;
+    width: 32vw;
     border-radius: 0.417vw 0.417vw 0 0;
     min-width: 13.333vw;
   }
@@ -441,6 +490,12 @@ button[disabled] {
       inset 1.25vw 0.833vw -1vw rgba(255, 255, 255, 0.1);
     padding: 0.083vw 0.333vw 0.083vw 0.333vw;
   }
+  .regular-checkbox:checked:after {
+    height: 1vw;
+    width: 0.5vw;
+    border-bottom: 0.417vw solid #99a1a7;
+    border-right: 0.417vw solid #99a1a7;
+  }
   #thankContainer {
     font-size: 2.083vw;
     border-radius: 16.667vw 0vw 16.667vw 0vw;
@@ -454,10 +509,10 @@ button[disabled] {
   }
   #line1 {
     margin-top: 3.333vw;
-    font-size: 4.167vw;
+    font-size: 3.333vw;
   }
   #line2 {
-    font-size: 4.167vw;
+    font-size: 3.333vw;
   }
   #hdfcLogo {
     margin-top: 1.667vw;
@@ -466,3 +521,261 @@ button[disabled] {
     margin-bottom: 4.167vw;
   }
 }
+@media screen and (max-width: 854px) {
+  .hdfcLogo {
+    display: none !important;
+  }
+
+  .main {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .regular-checkbox {
+    height: 2vw;
+    width: 2vw;
+  }
+  .mobieContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #imgContainer {
+    flex: 1;
+    width: 100%;
+    max-height: 50vw;
+  }
+
+  .festiveTreat {
+    width: 60%;
+  }
+  #logo {
+    display: none;
+  }
+  #mobileLogo {
+    width: 30%;
+    display: none;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+  .middle {
+    flex: 3;
+    width: 100%;
+  }
+  #slogan {
+    width: 45%;
+  }
+  #festive {
+    max-width: 23vw;
+  }
+  #wishlist {
+    font-size: 3.864vw;
+  }
+  #possible {
+    font-size: 3.864vw;
+    letter-spacing: 0.293vw;
+  }
+  #slogan {
+    width: 55%;
+    font-size: 2.5vw;
+  }
+  .links {
+    padding: 1vw 1vw;
+    font-size: 2vw;
+  }
+  .menu-content {
+    width: 45vw;
+  }
+  .menu-btn {
+    width: 50vw;
+  }
+  .phoneimg {
+    left: 16%;
+    width: 12%;
+    top: 26%;
+  }
+  .healthimg {
+    top: 54%;
+  }
+  .vehicleimg {
+    width: 23%;
+    left: 1%;
+    top: 40%;
+  }
+  .businessimg {
+    top: 53%;
+    left: 9%;
+    width: 16%;
+  }
+  .fridgeimg {
+    bottom: 20%;
+    width: 12%;
+    left: 2%;
+  }
+  .wardrobeimg {
+    bottom: 5%;
+    width: 12%;
+    left: 12%;
+  }
+  .laptopimg {
+    right: 12%;
+    width: 12%;
+  }
+  .homeimg {
+    top: 39%;
+    width: 14%;
+  }
+  .healthimg {
+    width: 9%;
+  }
+  .renovateimg {
+    top: 81%;
+    right: 8%;
+    width: 15%;
+  }
+  .jeweleryimg {
+    top: 66%;
+    width: 12%;
+    right: 2%;
+  }
+}
+@media screen and (max-width: 480px) {
+  html,
+  body,
+  #container,
+  .main {
+    height: 100%;
+  }
+  .regular-checkbox {
+    height: 3vw;
+    width: 3vw;
+  }
+  .hdfcHeaderLogo {
+    height: 14.583vw;
+    margin-bottom: 2.083vw;
+  }
+  #thankContainer {
+    min-height: 61vw;
+  }
+  #slogan {
+    width: 90%;
+    font-size: 4vw;
+  }
+  #festive {
+    max-width: 40vw;
+  }
+  #wishlist {
+    font-size: 4.875vw;
+  }
+  #possible {
+    font-size: 4.875vw;
+    letter-spacing: 0.521vw;
+  }
+  .dropdown-menu {
+    min-height: 70vw;
+  }
+  .menu-content {
+    min-height: 54vw;
+    width: 63.5vw;
+  }
+  .links {
+    font-size: 3.2vw;
+  }
+  .middle {
+    margin-top: 1vw;
+  }
+  .menu-btn {
+    height: 7.167vw;
+    width: 100%;
+    font-size: 4.333vw;
+  }
+  #submit {
+    height: 7.583vw;
+    font-size: 4vw;
+  }
+  .fridgeimg {
+    top: 21%;
+    width: 17%;
+    left: 4%;
+  }
+  .wardrobeimg {
+    bottom: 0%;
+    width: 17%;
+    left: 1%;
+  }
+  .renovateimg {
+    top: 85%;
+    right: 1%;
+    width: 19%;
+  }
+  .jeweleryimg {
+    top: 90%;
+    width: 17%;
+    right: 30%;
+  }
+  .healthimg {
+    top: 88%;
+    left: 26%;
+    width: 14%;
+  }
+  .vehicleimg {
+    left: 62%;
+    width: 25%;
+    top: 32%;
+  }
+  .bikeimg {
+    width: 22%;
+    left: 78%;
+    top: 27%;
+  }
+  .businessimg {
+    top: 8%;
+    left: 69%;
+    width: 19%;
+  }
+  .homeimg {
+    top: 30%;
+    width: 19%;
+    left: 17%;
+  }
+  .phoneimg {
+    left: 86%;
+    width: 14%;
+    top: 18%;
+  }
+  .laptopimg {
+    width: 17%;
+    top: 8%;
+    left: 12%;
+  }
+  #thankyou {
+    font-size: 9.833vw;
+  }
+  #line1 {
+    font-size: 5.167vw;
+  }
+  #line2 {
+    font-size: 5.167vw;
+  }
+  #thankContainer {
+    width: 100%;
+    padding: 1vw;
+  }
+  .thankyouPage {
+    width: 82%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* @media screen and (max-width: 375px) and (max-height: 812px) {
+  #slide2 {
+    height: 100%;
+    max-height: 124vw;
+  }
+}
+@media screen and (max-width: 411px) and (max-height: 823px) {
+  #slide2 {
+    height: 100%;
+    max-height: 108vw;
+  }
+} */
