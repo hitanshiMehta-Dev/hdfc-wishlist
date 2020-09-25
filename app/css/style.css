@@ -19,17 +19,22 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 #possible {text-transform: uppercase;font-size: 33px;color: #005f9c;font-weight: bold;letter-spacing: 2.5px;}
 #slogan {text-align: center;font-size: 36px;color: #005f9c;}
 .submitContainer {width: 100%;margin: auto;display: flex;justify-content: center;align-items: center;}
-#submit {margin-top: 10px;height: 55px;background-color: #dbdbd7;width: 60%;border: 2px;font-size: 28px;color: #004068;border-color: #a5a5a5;border-radius: 5px;}
-#submit:disabled,button[disabled] {background-color: #dbdbd7;border-color: #9e9e9e;color: #5293c7;}
+#submit {height: 55px;    background-color: #014689;
+  border-color: #014689;
+  color: #fff;width: 100%;border: 2px;font-size: 28px;border-radius:0 0 5px 5px; opacity: 1;}
+
 .menu-btn {outline: none;z-index: 2;background-color: #5293c7;border-color: #5293c7;border: 5px;display: flex;justify-content: center;align-items: center;color: white;padding: 16px;font-size: 28px;height: 50px;border-radius:0px 0px 5px 5px;width: 450px;}
 .dropdown-menu {margin-top: 10px;display: inline-block;}
-.menu-content {padding: 15px 30px;display: block;border-radius: 5px 5px 0 0;background-color: white;min-width: 160px;z-index: 1;}
-.links {color: black;padding: 8px 8px;border-radius: 5px;text-decoration: none;display: flex;  align-items: center;justify-content: flex-start;font-size: 18px;border-bottom: 1px solid #e6e5d7; margin-bottom: 5px;}
+.menu-content {padding: 15px 30px;display: block;border-radius: 5px 5px 0 0;background-color: white;min-width: 160px;z-index: 1;width: 450px;}
+.links {color: black;padding: 8px 8px;text-decoration: none;display: flex;  align-items: center;justify-content: flex-start;font-size: 18px;border-bottom: 1px solid #e6e5d7; margin-bottom: 5px;}
+.links.active{border-radius: 5px;}
 .links:hover {border-radius: 5px;}
+.links:last-child{ margin-bottom: 0; border-bottom: none;}
 .regular-checkbox {display: flex;justify-content: center;align-items: center;outline: none;-webkit-appearance: none;background-color: #fafafa;border: 1px solid #cacece;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);padding: 10px;border-radius: 3px;float: left;margin-right: 20px; position: relative;}
-.regular-checkbox:active,.regular-checkbox:checked:active {box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),inset 0px 1px 3px rgba(0, 0, 0, 0.1);}
-.regular-checkbox:checked {background-color: #e9ecee;border: 1px solid #adb8c0;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),inset 15px 10px -12px rgba(255, 255, 255, 0.1);color: #99a1a7;padding: 10px;}
-.regular-checkbox:checked:after {content: "";display: inline-block;transform: rotate(45deg);height: 9px;width: 4px;border-bottom: 3px solid #99a1a7;border-right: 3px solid #99a1a7;margin-top: 0;position: absolute;    top: 3px;    left: 0px;right: 0;margin: auto;}
+.regular-checkbox input{ opacity: 0; position: absolute; width: 0; height: 0; }
+.regular-checkbox:active,.regular-checkbox.checked:active {box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),inset 0px 1px 3px rgba(0, 0, 0, 0.1);}
+.regular-checkbox.checked {background-color: #e9ecee;border: 1px solid #adb8c0;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),inset 15px 10px -12px rgba(255, 255, 255, 0.1);color: #99a1a7;padding: 10px;}
+.regular-checkbox.checked:after {content: "";display: inline-block;transform: rotate(45deg);height: 9px;width: 4px;border-bottom: 3px solid #99a1a7;border-right: 3px solid #99a1a7;margin-top: 0;position: absolute;    top: 3px;    left: 0px;right: 0;margin: auto;}
 .arrow1 {width: 80%;display: block;z-index: 3;}
 .icon_wishlist{ display: none; position: absolute;animation: fadein 0.8s;transition: transform 0.3s ease;}
 .jeweleryimg {top: 60%;width: 8%;right: 1%;}
@@ -74,15 +79,15 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 #possible {font-size: 2.750vw;letter-spacing: 0.208vw;}
 #slogan {font-size: 3vw;}
 
-#submit {margin-top: 0.833vw;height: 4.583vw;border: 0.167vw;font-size: 2.333vw;border-radius: 0.417vw;}
+#submit {height: 4.583vw;border: 0.167vw;font-size: 2.333vw;}
 .menu-btn {border: 0.417vw;padding: 1.333vw;font-size: 2.333vw;height: 4.167vw;border-radius:0px 0px 0.417vw 0.417vw;width: 37.500vw;}
 .dropdown-menu {margin-top: 0.833vw;}
-.menu-content {padding: 1.250vw 2.500vw;border-radius: 0.417vw 0.417vw 0 0;min-width: 13.333vw;}
+.menu-content {padding: 1.250vw 2.500vw;min-width: 13.333vw;    width: 37.500vw;}
 .links {padding: 0.667vw 0.667vw;border-radius: 0.417vw;font-size: 1.500vw;}
 .links:hover {border-radius: 0.417vw;}
 .regular-checkbox {padding: 10px;border-radius: 0.250vw;margin-right: 1.667vw;}
-.regular-checkbox:checked {padding: 8px;}
-.regular-checkbox:checked:after {border-bottom: 3px solid #99a1a7;border-right: 3px solid #99a1a7;    top: 1px;}
+.regular-checkbox.checked {padding: 8px;}
+.regular-checkbox.checked:after {border-bottom: 3px solid #99a1a7;border-right: 3px solid #99a1a7;    top: 1px;}
 .arrow1 {width: 80%;}
 
 .jeweleryimg {top: 60%;width: 8%;right: 1%;}
@@ -117,10 +122,10 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 .menu-btn{ width: 100%;border: 5px;padding: 5px;font-size: 16px;height: 30px;border-radius: 0px 0px 5px 5px;}
 .confirm_wishlist{ display: block; width: 100%;}
 .dropdown-menu{ display: block;}
-.menu-content {padding: 8px;border-radius: 5px 5px 0 0;min-width:auto;}
+.menu-content {padding: 8px;border-radius: 5px 5px 0 0;min-width:auto;    width: 100%;}
 
 .links {padding: 4px;border-radius: 0;font-size: 14px;}
-.links:last-child{ margin-bottom: 0;}
+.links:last-child{ margin-bottom: 0; border-bottom: none;}
 .regular-checkbox {padding: 8px;border-radius: 2px;margin-right: 10px;}
 .vehicleimg {width: 25%;left: 11%;top: 17%;}
 .bikeimg {width: 25%;left: 4%;top: 6%;}
@@ -133,8 +138,8 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 .jeweleryimg {top: 48%;width: 16%;right: 1%;}
 .renovateimg {top: 28%;right: 1%;width: 25%;}
 .healthimg {top: 72%;width: 16%;left: 83%;}
-#submit {margin-top: 10px;height: 30px;border: 1px;font-size: 18px;border-radius: 5px;width: 100%;}
-.regular-checkbox:checked:after {top: 1px;}
+#submit {height: 30px;border: 1px;font-size: 18px;border-radius:0 0 5px 5px;width: 100%;}
+.regular-checkbox.checked:after {top: 1px;}
 .thankyouPage{ width: 95%;}
 #thankyou {margin-top: 4.333vw;font-size: 7.833vw;width: 100%;}
 #line1 {margin-top: 4.333vw;font-size: 4.333vw;}

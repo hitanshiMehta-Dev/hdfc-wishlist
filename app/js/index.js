@@ -8,12 +8,14 @@ $(function () {
         var _thisTarget = _this.attr('data-id') ;
         if($(this).find('input[type="checkbox"]').is(':checked')){
             $('.'+_thisTarget).show();
-            $(this).css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'})
+            $(this).css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'}).addClass('active');
+            $(this).find('.regular-checkbox').addClass('checked')
             flag = flag + 1;
             checkVisibility()
         }else{
             $('.'+_thisTarget).hide()
-            $(this).css({'backgroundColor':'white'})
+            $(this).css({'backgroundColor':'white'}).removeClass('active')
+            $(this).find('.regular-checkbox').removeClass('checked')
             flag = flag - 1;
             checkVisibility()
         }
