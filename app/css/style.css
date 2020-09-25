@@ -1,20 +1,45 @@
 @font-face {
-font-family: "Helvetica";
-src: url("../Fonts/HelveticaNeueLTStd-Cn.woff2") format("woff2"),
-url("../Fonts/HelveticaNeueLTStd-Cn.woff") format("woff");
+  font-family: "Helvetica";
+  src: url("../Fonts/HelveticaNeueLTStd-Cn.woff2") format("woff2"),
+       url("../Fonts/HelveticaNeueLTStd-Cn.woff") format("woff");
 }
+
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url('../Fonts/Helvetica-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../Fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/Helvetica-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../Fonts/Helvetica-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('../Fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Helvetica-regular';
+  src: url('../Fonts/Helvetica.eot'); /* IE9 Compat Modes */
+  src: url('../Fonts/Helvetica.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Fonts/Helvetica.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../Fonts/Helvetica.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../Fonts/Helvetica.svg#Helvetica-regular') format('svg'); /* Legacy iOS */
+}
+
+
 * {margin: 0;padding: 0;font-family: "Helvetica"; box-sizing: border-box;}
 html,body {height: auto;min-height: 100%;}
 #container {max-width: 1200px;margin: auto;padding: 0 0; position: relative;}
 body {position: relative;background-image: url(../images/bgsmall1.jpg);}
-.main {flex-direction: row;display: flex;justify-content: space-around;align-items: flex-start;padding: 0 0;}
+.main {flex-direction: row;display: flex;justify-content: flex-start;align-items: flex-start;padding: 0 0;}
 .hdfcHeaderLogoContainer {width: 100%;display: flex;justify-content: center;align-items: center;}
 .hdfcHeaderLogo {width: 100%;margin-bottom: 20px;}
 #slide2 {display: flex;width: 100%;justify-content: center;align-items: center;}
 #festive {margin: auto;max-width: 300px;}
 #logo {width: 20%;display: none;margin-top: 20px;}
 #mobileLogo {display: none;}
-#imgContainer {display: flex;justify-content: center;align-items: center;flex-direction: column;}
+#imgContainer {display: flex;flex-direction: column;width: 50%;}
+.imgContainer_inner{max-width: 330px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;}
 #wishlist {text-transform: uppercase;font-size: 33px;color: #005f9c;font-weight: bold;}
 #possible {text-transform: uppercase;font-size: 33px;color: #005f9c;font-weight: bold;letter-spacing: 2.5px;}
 #slogan {text-align: center;font-size: 36px;color: #005f9c;}
@@ -26,7 +51,7 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 .menu-btn {outline: none;z-index: 2;background-color: #5293c7;border-color: #5293c7;border: 5px;display: flex;justify-content: center;align-items: center;color: white;padding: 16px;font-size: 28px;height: 50px;border-radius:0px 0px 5px 5px;width: 450px;}
 .dropdown-menu {margin-top: 10px;display: inline-block;}
 .menu-content {padding: 15px 30px;display: block;border-radius: 5px 5px 0 0;background-color: white;min-width: 160px;z-index: 1;width: 450px;}
-.links {color: black;padding: 8px 8px;text-decoration: none;display: flex;  align-items: center;justify-content: flex-start;font-size: 18px;border-bottom: 1px solid #e6e5d7; margin-bottom: 5px;}
+.links {color: #03609f;padding: 8px 8px;text-decoration: none;display: flex;  align-items: center;justify-content: flex-start;font-size: 18px;border-bottom: 1px solid #e6e5d7; margin-bottom: 5px;font-family: 'Helvetica-regular';}
 .links.active{border-radius: 5px;}
 .links:hover {border-radius: 5px;}
 .links:last-child{ margin-bottom: 0; border-bottom: none;}
@@ -38,19 +63,19 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 .arrow1 {width: 80%;display: block;z-index: 3;}
 .icon_wishlist{ display: none; position: absolute;animation: fadein 0.8s;transition: transform 0.3s ease;}
 .jeweleryimg {top: 60%;width: 8%;right: 1%;}
-.fridgeimg {bottom: 16%;width: 8%;left: 3%;}
-.homeimg {top: 41%;width: 8%;right: 1%;}
+.fridgeimg {top: 34%;width: 8%;left: 28%;}
+.homeimg {top: 54%;width: 10%;right: 1%;}
 .healthimg {top: 72%;width: 7%;left: 40%;}
-.businessimg {bottom: 17%;left: 28%;width: 8%;}
-.vehicleimg {width: 10%;left: 31%;top: 54%;}
-.bikeimg {width: 10%;left:40%;top: 46%;}
-.laptopimg {left: 39%;width: 9%;top: 24%;}
-.phoneimg {right: 1%;width: 9%;top: 18%;}
-.renovateimg {top: 77%;right: 0.5%;width: 8%;}
+.businessimg {top: 49%;left: 30%;width: 11%;}
+.vehicleimg {width: 10%;left: 28%;top: 30%;}
+.bikeimg {width: 10%;left: 38%;top: 22%;}
+.laptopimg {left: 35%;width: 9%;top: 72%;}
+.phoneimg {right: 1%;width: 11%;top: 25%;}
+.renovateimg {top: 76%;right: 0.5%;width: 10%;}
 .wardrobeimg {bottom: 2%;width: 9%;left: 16%;}
 
 .washing {height: 23px;width: 23px;}
-#thankContainer {display: none;color: #000;width: 95%;text-align: center;font-size: 25px;background-color: #eceec0;border-radius: 200px 0px 200px 0px;padding: 120px 0px 120px 0px;margin-left: 50px;justify-content: center;align-items: center;}
+#thankContainer {display: none;color: #035f9d;width: 95%;text-align: center;font-size: 25px;background-color: #eceec0;border-radius: 200px 0px 200px 0px;padding: 120px 0px 120px 0px;justify-content: center;align-items: center;}
 #thankContainer.flex{ display: flex;}
 #thankyou {margin-top: 40px;font-size: 70px;width: 45%;}
 .thankyouPage {display: none;flex-direction: column;align-items: flex-end;}
@@ -59,6 +84,10 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 #hdfcLogo {width: 30%;margin-top: 20px;display: none;visibility: hidden;}
 .hdfclogocontainer {overflow: hidden;margin-bottom: 50px;}
 
+ 
+.offers_Text{ font-size: 24px; text-align: center; margin-top: 10px;font-family: 'Helvetica-Bold';}
+.offer_tag{ display: flex; justify-content: space-between; align-items: center; margin-top: 10px;font-family: 'Helvetica-Bold';}
+.offer_tag span{ background: #005f9c; color: #fff; margin: 0 5px; padding:4px 8px;font-family: 'Helvetica-Bold';}
 /* Animation */
 @keyframes fadein {
   from {

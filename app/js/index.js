@@ -1,24 +1,25 @@
-var clickedImage = ['dummy']
-var isImageClicked = 0;
+
 var flag = 0;
 $(function () {
-    checkVisibility()
-    $('#menu-content label').on('click',function(){
+
+    $('.menu-content .links').find('input[type="checkbox"]').on('change',function(){
         var _this = $(this);
-        var _thisTarget = _this.attr('data-id') ;
-        if($(this).find('input[type="checkbox"]').is(':checked')){
+        console.log('click')
+        var _thisTarget = _this.parents('.links').attr('data-id') ;
+        if($(this).is(':checked')){
             $('.'+_thisTarget).show();
-            $(this).css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'}).addClass('active');
-            $(this).find('.regular-checkbox').addClass('checked')
+            _this.parents('.links').css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'}).addClass('active');
+            _this.parents('.links').find('.regular-checkbox').addClass('checked')
             flag = flag + 1;
             checkVisibility()
         }else{
             $('.'+_thisTarget).hide()
-            $(this).css({'backgroundColor':'white'}).removeClass('active')
-            $(this).find('.regular-checkbox').removeClass('checked')
+            _this.parents('.links').css({'backgroundColor':'white'}).removeClass('active')
+            _this.parents('.links').find('.regular-checkbox').removeClass('checked')
             flag = flag - 1;
             checkVisibility()
         }
+       
     })
 
     $('.confirm_wishlist').submit(function (e) {
@@ -68,6 +69,7 @@ function getdata(){
 
 
 function checkVisibility() {
+    console.log(flag)
     if (flag === 0) {
         document.getElementById("submit").disabled = true;
     } else {
