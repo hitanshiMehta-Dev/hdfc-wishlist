@@ -48,17 +48,20 @@ $(function () {
 });
 
 function getdata(){
-    $.ajax({
-        url: 'https://hdfc-wishlist.pctr.co/api/data/1',
-        
-        method: 'GET',
-        dataType: 'json',
-        success: function (data) {
-            if(data != ''){
-                onSubmit();
+    var id = getParameterByName('id');
+    console.log(id)
+    if(id != null){
+        $.ajax({
+            url: 'https://hdfc-wishlist.pctr.co/api/data/'+id,
+            method: 'GET',
+            dataType: 'json',
+            success: function (data) {
+                if(data != ''){
+                    onSubmit();
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 
