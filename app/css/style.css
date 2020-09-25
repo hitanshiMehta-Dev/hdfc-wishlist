@@ -31,7 +31,7 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
 .regular-checkbox:checked {background-color: #e9ecee;border: 1px solid #adb8c0;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05),inset 15px 10px -12px rgba(255, 255, 255, 0.1);color: #99a1a7;padding: 10px;}
 .regular-checkbox:checked:after {content: "";display: inline-block;transform: rotate(45deg);height: 9px;width: 4px;border-bottom: 3px solid #99a1a7;border-right: 3px solid #99a1a7;margin-top: 0;position: absolute;    top: 3px;    left: 0px;right: 0;margin: auto;}
 .arrow1 {width: 80%;display: block;z-index: 3;}
-.icon_wishlist{ display: none; position: absolute;animation: fadein 0.8s;}
+.icon_wishlist{ display: none; position: absolute;animation: fadein 0.8s;transition: transform 0.3s ease;}
 .jeweleryimg {top: 60%;width: 8%;right: 0%;}
 .fridgeimg {bottom: 16%;width: 8%;left: 3%;}
 .homeimg {top: 41%;width: 8%;right: 0;}
@@ -64,6 +64,7 @@ body {position: relative;background-image: url(../images/bgsmall1.jpg);}
   }
 }
 
+.icon_wishlist:hover{ transform: scale(1.1);}
 
 @media screen and (max-width : 1200px){
 
