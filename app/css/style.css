@@ -263,7 +263,7 @@ button[disabled] {
   -o-animation: fadein 0.8s;
 }
 .vehicleimg {
-  display: none;
+  display: block;
   position: absolute;
   width: 10%;
   left: 22%;
@@ -274,7 +274,7 @@ button[disabled] {
   -o-animation: fadein 0.8s;
 }
 .bikeimg {
-  display: none;
+  display: block;
   position: absolute;
   width: 10%;
   left: 31%;
@@ -327,6 +327,10 @@ button[disabled] {
   -moz-animation: fadein 0.8s;
   -webkit-animation: fadein 0.8s;
   -o-animation: fadein 0.8s;
+}
+.washing {
+  height: 23px;
+  width: 23px;
 }
 #thankContainer {
   display: none;
@@ -719,7 +723,7 @@ button[disabled] {
   }
   .vehicleimg {
     left: 62%;
-    width: 25%;
+    width: 22%;
     top: 32%;
   }
   .bikeimg {
@@ -765,6 +769,10 @@ button[disabled] {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .washing {
+    height: 4.792vw;
+    width: 4.792vw;
   }
 }
 /* @media screen and (max-width: 375px) and (max-height: 812px) {

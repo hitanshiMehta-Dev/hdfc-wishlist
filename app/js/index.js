@@ -1,14 +1,7 @@
-
-
 $(function () {
     console.log("Enter")
     let flag = 0;
     checkVisibility()
-    // $("img.homeimg").hover(function () {
-    //     $(this).css("background-color", "yellow");
-    // }, function () {
-    //     $(this).css("background-color", "pink");
-    // });
     document.getElementById("wardrobe").onclick = function () {
         if (this.checked) {
             $('#wardrobeimg').css('display', 'block')
@@ -210,9 +203,62 @@ $('.confirm_wishlist').submit(function (e) {
     });
     console.log(JSON.stringify(data))
 });
-
+var clickedImage = ['dummy']
+var isImageClicked = 0;
+function scaleImage(elem) {
+    var dataId = $(elem).data("id");
+    var parentWidth = $(document).width();
+    var Width = ($("." + dataId).width() / parentWidth * 100).toFixed();
+    if ($(window).width() <= 480) {
+        var increaseWidth = Number(Width) + 3 + "%";
+        var reduceWidth = Number(Width) - 3 + "%";
+    } else {
+        var increaseWidth = Number(Width) + 2 + "%";
+        var reduceWidth = Number(Width) - 2 + "%";
+    }
+    for (var i = 0; i < clickedImage.length; i++) {
+        if (String(dataId) === String(clickedImage[i])) {
+            isImageClicked = 1
+            break;
+        } else {
+            isImageClicked = 0
+        }
+    }
+    if (isImageClicked) {
+        var index = clickedImage.indexOf(dataId);
+        clickedImage.splice(index, 1);
+        if (String(dataId) === 'bikeimg' || String(dataId) === 'vehicleimg') {
+            $('.bikeimg').animate({
+                'width': reduceWidth
+            }, "slow");
+            $('.vehicleimg').animate({
+                'width': reduceWidth
+            }, "slow");
+        } else {
+            $('.' + dataId).animate({
+                'width': reduceWidth
+            }, "slow");
+        }
+    } else {
+        console.log(dataId)
+        if (String(dataId) === 'bikeimg' || String(dataId) === 'vehicleimg') {
+            $('.bikeimg').animate({
+                'width': increaseWidth
+            }, "slow");
+            $('.vehicleimg').animate({
+                'width': increaseWidth
+            }, "slow");
+        } else {
+            $('.' + dataId).animate({
+                'width': increaseWidth
+            }, "slow");
+        }
+        clickedImage.push(dataId)
+    }
+}
 function getWidthPer(elem) {
     var parentWidth = $(document).width();
     var homeWidth = ($("." + elem).width() / parentWidth * 100).toFixed() + "%";
     return homeWidth
 }
+
