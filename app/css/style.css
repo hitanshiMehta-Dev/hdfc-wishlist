@@ -263,7 +263,7 @@ button[disabled] {
   -o-animation: fadein 0.8s;
 }
 .vehicleimg {
-  display: block;
+  display: none;
   position: absolute;
   width: 10%;
   left: 22%;
@@ -274,7 +274,7 @@ button[disabled] {
   -o-animation: fadein 0.8s;
 }
 .bikeimg {
-  display: block;
+  display: none;
   position: absolute;
   width: 10%;
   left: 31%;
