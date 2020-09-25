@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HDFC_wishlist</title>
+    <title>HDFC Wishlist</title>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -32,181 +32,165 @@
           <div id="slide2" class="slide2">
             <img
               src="images/home.png"
-              class="homeimg"
+              class="homeimg icon_wishlist"
               id="homeimg"
-              data-id="homeimg"
-              onclick="scaleImage(this)"
+              
             />
             <img
               src="images/fridge.png"
-              class="fridgeimg"
+              class="fridgeimg icon_wishlist"
               id="fridgeimg"
-              data-id="fridgeimg"
-              onclick="scaleImage(this)"
+              
             />
             <img
               src="images/insurance.png"
-              class="healthimg"
+              class="healthimg icon_wishlist"
               id="healthimg"
-              data-id="healthimg"
-              onclick="scaleImage(this)"
+              
             />
             <img
               src="images/business.png"
-              class="businessimg"
+              class="businessimg icon_wishlist"
               id="businessimg"
-              data-id="businessimg"
-              onclick="scaleImage(this)"
+              
             />
             <img
               src="images/car.png"
-              class="vehicleimg"
+              class="vehicleimg icon_wishlist"
               id="vehicleimg"
-              data-id="vehicleimg"
-              onclick="scaleImage(this)"
+             
             />
             <img
               src="images/bike.png"
-              class="bikeimg"
+              class="bikeimg vehicleimg icon_wishlist"
               id="bikeimg"
               data-id="bikeimg"
-              onclick="scaleImage(this)"
             />
             <img
               src="images/jewelery.png"
-              class="jeweleryimg"
+              class="jeweleryimg icon_wishlist"
               id="jeweleryimg"
-              data-id="jeweleryimg"
-              onclick="scaleImage(this)"
             />
             <img
               src="images/gift.png"
-              class="laptopimg"
+              class="laptopimg icon_wishlist"
               id="laptopimg"
-              data-id="laptopimg"
-              onclick="scaleImage(this)"
             />
             <img
               src="images/mobile.png"
-              class="phoneimg"
+              class="phoneimg icon_wishlist"
               id="phoneimg"
-              data-id="phoneimg"
-              onclick="scaleImage(this)"
             />
             <img
               src="images/Renovate.jpg"
-              class="renovateimg"
+              class="renovateimg icon_wishlist"
               id="renovateimg"
-              data-id="renovateimg"
-              onclick="scaleImage(this)"
             />
             <img
               src="images/wardrobe.png"
-              class="wardrobeimg"
+              class="wardrobeimg icon_wishlist"
               id="wardrobeimg"
-              data-id="wardrobeimg"
-              onclick="scaleImage(this)"
             />
-            <form
-              type="submit"
-              form="nameform"
-              value="Submit"
-              name="confirm_wishlist"
-              class="confirm_wishlist"
-            >
+            <form form="nameform" name="confirm_wishlist" class="confirm_wishlist" >
               <div class="dropdown-menu">
                 <div class="menu-content" id="menu-content">
-                  <label class="links" href="#" id="healthContainer">
-                    Health 🩺
+                  <label class="links" href="#" id="healthContainer" data-id="healthimg">
                     <input
                       type="checkbox"
                       id="health"
                       class="regular-checkbox"
                       value="Keep my health in check"
                     />
+                    Health 🩺
                   </label>
-                  <label class="links" href="#" id="businessContainer">
-                    Business Growth 🏢💰
+                  <label class="links" href="#" id="businessContainer" data-id="businessimg">
                     <input
                       type="checkbox"
                       id="business"
                       class="regular-checkbox"
                       value="Grow my business"
                     />
+                    Business Growth 🏢💰
                   </label>
-                  <label class="links" href="#" id="vehicleContainer">
-                    Safe commute 🚗🏍️
+                  <label class="links" href="#" id="vehicleContainer"  data-id="vehicleimg">
+                    
                     <input
                       type="checkbox"
                       id="vehicle"
                       class="regular-checkbox"
                       value="Own a private vehicle for safer commute"
                     />
+                    Safe commute 🚗🏍️
                   </label>
-                  <label class="links" href="#" id="fridgeContainer">
-                    Upgrade Kitchen
-                    <img src="images/washing.png" class="washing" />
-                    <img src="images/ac.png" class="washing" />
+                  <label class="links" href="#" id="fridgeContainer" data-id="fridgeimg">
                     <input
                       type="checkbox"
                       id="fridge"
                       class="regular-checkbox"
                       value="Ease my kitchen duties"
                     />
+                    Upgrade Kitchen
+                    <img src="images/washing.png" class="washing" />
+                    <img src="images/ac.png" class="washing" />
                   </label>
-                  <label class="links" href="#" id="jeweleryContainer">
-                    Jewelry 💎
+                  <label class="links" href="#" id="jeweleryContainer" data-id="jeweleryimg">
+                    
                     <input
                       type="checkbox"
                       id="jewelery"
                       class="regular-checkbox"
                       value="Buy jewelry for the upcoming festive season"
                     />
+                    Jewelry 💎
                   </label>
-                  <label class="links" href="#" id="homeContainer">
-                    Dream Home 🏡
+                  <label class="links" href="#" id="homeContainer" data-id="homeimg">
+                    
                     <input
                       type="checkbox"
                       id="home"
                       class="regular-checkbox"
                       value="Buy my dream home"
                     />
+                    Dream Home 🏡
                   </label>
-                  <label class="links" href="#" id="laptopContainer">
-                    Gift for loved ones 🎁
+                  <label class="links" href="#" id="laptopContainer" data-id="laptopimg">
+                    
                     <input
                       type="checkbox"
                       id="laptop"
                       class="regular-checkbox"
                       value="Make WFH a seamless experience"
                     />
+                    Gift for loved ones 🎁
                   </label>
-                  <label class="links" href="#" id="phoneContainer">
-                    Smartphone 📱
+                  <label class="links" href="#" id="phoneContainer" data-id="phoneimg">
+                    
                     <input
                       type="checkbox"
                       id="phone"
                       class="regular-checkbox"
                       value="Upgrade to a new smartphone"
                     />
+                    Smartphone 📱
                   </label>
-                  <label class="links" href="#" id="renovateContainer">
-                    Home Renovation 🏚️
+                  <label class="links" href="#" id="renovateContainer" data-id="renovateimg"> 
+                    
                     <input
                       type="checkbox"
                       id="renovate"
                       class="regular-checkbox"
                       value="Renovate my home"
                     />
+                    Home Renovation 🏚️
                   </label>
-                  <label class="links" href="#" id="wardrobeContainer">
-                    Apparels 👗👚
+                  <label class="links" href="#" id="wardrobeContainer" data-id="wardrobeimg">
                     <input
                       type="checkbox"
                       id="wardrobe"
                       class="regular-checkbox"
                       value="Get myself a new wardrobe"
                     />
+                    Apparels 👗👚
                   </label>
                 </div>
                 <button class="menu-btn" id="menu-btn">Wishlist</button>
@@ -225,7 +209,7 @@
             </form>
           </div>
         </div>
-        <img src="images/hdfc-logo.jpeg" id="logo" class="logo" />
+        
         <div class="thankyouPage">
           <img src="images/hdfc-logo.jpeg" class="hdfcLogo" id="hdfcLogo" />
           <div class="thankyouContiner" id="thankContainer">
