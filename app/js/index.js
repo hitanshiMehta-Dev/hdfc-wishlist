@@ -6,6 +6,7 @@ $(function () {
         var _this = $(this);
         console.log('click')
         var _thisTarget = _this.parents('.links').attr('data-id') ;
+        
         if($(this).is(':checked')){
             $('.'+_thisTarget).show();
             _this.parents('.links').css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'}).addClass('active');
