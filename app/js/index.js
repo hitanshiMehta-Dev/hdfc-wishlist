@@ -31,20 +31,25 @@ $(function () {
             allWish.push($(this).val());
         });
         var id = getParameterByName('id');
-        var data = { "model": [{ "id": id, "items": allWish }] }
-        $.ajax({
-            url: 'https://hdfc-wishlist.pctr.co/api/data',
-            headers: {
-                'x-access-token': '3b584aa8927edc29c69ede29ae9389f41d9800f630e3028721c4306d02d5cc0c',
-                'Content-Type': 'application/json'
-            },
-            method: 'POST',
-            dataType: 'json',
-            data: JSON.stringify(data),
-            success: function (data) {
-                console.log('succes: ' + data);
-            }
-        });
+        
+        if(id != null){
+            var data = { "model": [{ "id": id, "items": allWish }] }
+            $.ajax({
+                url: 'https://hdfc-wishlist.pctr.co/api/data',
+                headers: {
+                    'x-access-token': '3b584aa8927edc29c69ede29ae9389f41d9800f630e3028721c4306d02d5cc0c',
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST',
+                dataType: 'json',
+                data: JSON.stringify(data),
+                success: function (data) {
+                    console.log('succes: ' + data);
+                    onSubmit();
+                }
+            });
+        }
+        
     });
 
     getdata()
