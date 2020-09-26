@@ -8,7 +8,8 @@ $(function () {
         var _thisTarget = _this.parents('.links').attr('data-id') ;
         
         if($(this).is(':checked')){
-            $('.'+_thisTarget).show();
+            var getSrc = $('.'+_thisTarget).attr('data-src');
+            $('.'+_thisTarget).attr('src',getSrc).show();
             _this.parents('.links').css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'}).addClass('active');
             _this.parents('.links').find('.regular-checkbox').addClass('checked')
             flag = flag + 1;
@@ -45,9 +46,10 @@ $(function () {
                 data: JSON.stringify(data),
                 success: function (data) {
                     console.log('succes: ' + data);
-                    onSubmit();
+                    
                 }
             });
+            onSubmit();
         }
         
     });
@@ -65,17 +67,17 @@ function getdata(){
             method: 'GET',
             dataType: 'json',
             success: function (data) {
-                if(data != ''){
+                if(data != ''){   
                     onSubmit();
                 }
             }
         });
+        
     }
 }
 
 
 function checkVisibility() {
-    console.log(flag)
     if (flag === 0) {
         document.getElementById("submit").disabled = true;
     } else {
@@ -96,7 +98,7 @@ function getParameterByName(name, url) {
         results = regex.exec(url);
     if (!results) return null;
     if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    return decodeURIComponent(results[2]);
 }
 
 
