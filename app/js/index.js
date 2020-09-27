@@ -59,11 +59,12 @@ $(function () {
 });
 
 function getdata(){
+
     var id = getParameterByName('id');
-    console.log(id)
+
     if(id != null){
         $.ajax({
-            url: 'https://hdfc-wishlist.pctr.co/api/data/'+id,
+            url: 'https://hdfc-wishlist.pctr.co/api/data/?id='+id,
             method: 'GET',
             dataType: 'json',
             success: function (data) {
