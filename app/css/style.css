@@ -148,7 +148,7 @@ input[type='checkbox'] {
 .healthimg {top: 72%;width: 7%;left: 40%;}
 .businessimg {top: 46%;left: 37%;width: 11%;}
 .vehicleimg {width: 10%;left: 32%;top: 32%;}
-.bikeimg {width: 10%;left: 41%;top: 22%;}
+.bikeimg {width: 10%;left: 38%;top: 18%;}
 .laptopimg {left: 39%;width: 9%;top: 68%;}
 .phoneimg {right: 1%;width: 11%;top: 25%;}
 .renovateimg {top: 76%;right: 0.5%;width: 10%;}
@@ -156,7 +156,7 @@ input[type='checkbox'] {
 
 
 .washing {height: 1.917vw;width: 1.917vw;}
-#thankContainer {width: 95%;font-size: 2.083vw;border-radius: 16.667vw 0px 16.667vw 0px;padding: 10vw 0px 10vw 0px;margin-left: 4.167vw;}
+#thankContainer {width: 95%;font-size: 2.083vw;border-radius: 16.667vw 0px 16.667vw 0px;padding: 10vw 20px 10vw 20px;}
 #thankyou {margin-top: 3.333vw;font-size: 5.833vw;width: 45%;}
 #line1 {margin-top: 3.333vw;font-size: 3.333vw;}
 #line2 {font-size: 3.333vw;}

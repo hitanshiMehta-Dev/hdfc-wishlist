@@ -8,8 +8,17 @@ $(function () {
         var _thisTarget = _this.parents('.links').attr('data-id') ;
         
         if($(this).is(':checked')){
-            var getSrc = $('.'+_thisTarget).attr('data-src');
-            $('.'+_thisTarget).attr('src',getSrc).show();
+            console.log(_thisTarget)
+            if(_thisTarget == 'vehicleimg'){
+                var getSrcCar = $('#vehicleimg').attr('data-src');
+                var getSrcBike = $('#bikeimg').attr('data-src');
+                $('#vehicleimg').attr('src',getSrcCar).show();
+                $('#bikeimg').attr('src',getSrcBike).show();
+            }else{
+                var getSrc = $('.'+_thisTarget).attr('data-src');
+                $('.'+_thisTarget).attr('src',getSrc).show();
+            }
+            
             _this.parents('.links').css({'backgroundColor':'#e8e8e8', 'animation': 'fadein 1s'}).addClass('active');
             _this.parents('.links').find('.regular-checkbox').addClass('checked')
             flag = flag + 1;
@@ -49,7 +58,7 @@ $(function () {
                     
                 }
             });
-            onSubmit();
+            onSubmit(false);
         }
         
     });
@@ -69,7 +78,7 @@ function getdata(){
             dataType: 'json',
             success: function (data) {
                 if(data != ''){   
-                    onSubmit();
+                    onSubmit(true);
                 }
             }
         });
@@ -86,7 +95,11 @@ function checkVisibility() {
     }
 }
 
-function onSubmit() {
+function onSubmit(flag) {
+    if(flag){
+        var htmlString = '<div><label id="line1">We have already received your wishlist </label><br /><label id="line2">& will get back to you with our exclusive deals shortly</label></div>';
+        $('#thankContainer').html(htmlString);
+    }
     $('#slide2,#logo,#slogan,.middle').hide();
     $('#thankContainer').css('animation', 'fadein 1s')
     $('.thankyouPage').show();
